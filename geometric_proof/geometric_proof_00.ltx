@@ -9,6 +9,7 @@
 \usepackage{url}
 \usepackage{txfonts}
 \usepackage{color}
+
 \usepackage{tikz}
 \usetikzlibrary{calc}
 \usetikzlibrary{intersections}
@@ -194,6 +195,172 @@
 	このようなケースは角度が数値としてわかるものが
 	複数ある場合に現れる．同じ数値から同じ角度を引けば，
 	当然残る角も等しくなるという流れだ．
+
+
+	\subsection{等しい長さ}
+	辺が等しくなる場合は円の半径である場合と，共通な辺の場合だけである．
+	そのため，いちいち説明することはない．
+
+	\subsection{辺の比}
+	辺の長さの比が同じ場合はあまりない．辺の長さが数値としてわかっていない場合は
+	必ず平行線が関係してくる．まず，一番簡単に現れるケースは図\ref{tikz_heikosen_senbun_hi}のような状態である．
+	3本の平行線とそれらに交わる直線があると必ず線分の長さの比は等しくなる．
+
+	逆に辺の長さの比が等しいことから，3本の横線が平行であると言うこともできる
+	\footnote{並行の証明自体があまり出てこないので使うことは少なめ．}．
+
+
+
+	\begin{figure}[htbp]
+		\centering
+		\begin{tikzpicture}[scale=1]\Large
+			
+			\draw[thick] (-5, 2)--(5, 2);
+			\draw[thick] (-5, 0)--(5, 0);
+			\draw[thick] (-5, -3)--(5, -3);
+
+			\draw[thick] (-3, 2)--(-3, -3);
+			\draw[thick] (0, 2)--(4, -3);
+
+			\node[above left] at (-3, 1){$a$};
+			\node[above left] at (-3, -2){$b$};
+
+			\node[above right] at (1, 1){$a$};
+			\node[above right] at (3, -2){$b$};
+		\end{tikzpicture}
+		\caption{平行線による線分の比}
+		\label{tikz_heikosen_senbun_hi}
+	\end{figure}
+
+	平行線が関わるケースで重要なのは三角形の底辺とその平行な線である．
+	図\ref{tikz_sannkakukei_teihenn_heiko}は三角形の底辺に対して平行な線が引いてある．
+	すると同じ辺の長さの比が3ヶ所に現れる．
+	要注意なケースである．
+
+	こちらでも，辺の比が等しいことから線分が平行であると言うことができる．
+
+	\begin{figure}[htbp]\Large
+		\centering
+		\begin{tikzpicture}[scale=1]
+			\draw[thick] (-3, 0)--(3, 0)--(1, 4)--cycle;
+			\draw[thick] (-1, 2)--(2, 2);
+
+			\node[above left] at (0, 3){$a$};
+			\node[above left] at (-2, 1){$b$};
+
+			\node[above right] at (1.5, 3){$a$};
+			\node[above right] at (2.5, 1){$b$};
+
+			\node[above right] at (0, 2){$a$};
+			\node[above right] at (0, 0){$b$};
+		\end{tikzpicture}
+		\caption{三角形の底辺と平行な線分}
+		\label{tikz_sannkakukei_teihenn_heiko}
+	\end{figure}
+
+
+	さらに，辺の比がわかる最も重要なケースは角の二等分線が関係するときである．
+	図\ref{tikz_kaku_nitobunsenn_hi}のように，三角形の1つの頂点から引かれる角の二等分線が向かい合う辺に
+	交わると，それによって分かれる2つの部分の比がわかるのだ．
+
+	\begin{figure}[htbp]
+		\centering
+		\begin{tikzpicture}[scale=2]\Large
+
+			\draw[white, name path=circ1](3, 0) arc(0:33:6);
+			\draw[white, name path=circ2](0, 0) arc(180:100:3);
+			\draw[thick, name intersections={of=circ1 and circ2, by={a}}](a)--(-3, 0)--(3, 0)--cycle ;
+			\draw[thick] (a)--(1, 0);
+
+			\node[above left] at ($(a)!0.5!(-3, 0)$) {$a$};
+			\node[above right] at ($(a)!0.5!(3, 0)$) {$b$};
+
+			\node[below left] at ($(1, 0)!0.5!(-3, 0)$) {$a$};
+			\node[below right] at ($(1, 0)!0.5!(3, 0)$) {$b$};
+		\end{tikzpicture}
+		\caption{角の二等分線と線分の比}
+		\label{tikz_kaku_nitobunsenn_hi}
+	\end{figure}
+
+	角の二等分線と出てきたら必ず疑うべき条件である．見落としは許されない．
+
+	\subsection{証明に用いる定理}
+	図形問題の一部では定理を用いるものがある．
+	中学数学で扱う定理を紹介する．
+
+	\subsubsection{円周角の定理}
+	説明はすでにしている．図\ref{tikz_enshukaku_teiri}で表される等しい角の関係である．
+	また，円周角は中心角の半分であるという性質を忘れては
+	ならない．
+
+	\begin{figure}[htbp]
+		\centering
+		\begin{tabular}{c}
+			\begin{minipage}{0.45\hsize}
+				\begin{tikzpicture}[scale=1]
+					\draw[thick] (0, 0)circle[radius=3];
+					\coordinate(a) at (225:3) ;
+					\coordinate(b) at (-45:3) ;
+					\foreach \x in {0, 30, ..., 180}{
+						\draw[thick] (a)--(\x:3)--(b);
+					}
+				\end{tikzpicture}
+			\end{minipage}
+
+			\begin{minipage}{0.45\hsize}
+				\begin{tikzpicture}[scale=1]
+					\draw[thick] (0, 0)circle[radius=3];
+					\coordinate(a) at (225:3) ;
+					\coordinate(b) at (-45:3) ;
+					\draw[thick] (a)--(100:3)--(b);
+					\draw[thick] (a)--(0, 0)--(b);
+					\fill (0, 0)circle (2pt);
+				\end{tikzpicture}
+			\end{minipage}
+		\end{tabular}
+		\caption{円周角の定理}
+		\label{tikz_enshukaku_teiri}
+	\end{figure}
+
+	\subsubsection{中点連結定理}
+	三角形の2辺の中点を結ぶ線分は，他の辺と並行であり
+	長さは半分であるという定理である．
+	今は
+	\begin{gather*}
+		\mathrm{AM}=\mathrm{BM}\\
+		\mathrm{AN}=\mathrm{BN}\\
+	\end{gather*}
+	となっている．すると，
+	\begin{gather*}
+		\mathrm{MN}= \frac{1}{2}\mathrm{BC}, \quad 
+		\mathrm{MN}//\mathrm{BC}
+	\end{gather*}
+	であることが中点連結定理から直ちにわかる．
+
+	\begin{figure}[htbp]\Large
+		\centering
+		\begin{tikzpicture}[scale=1]
+			\draw[thick] (-3, 0)node[below left]{B}--(3, 0)node[below right]{C}--(1, 4)node[above]{A}--cycle;
+			\draw[thick] (-1, 2)node[above left]{M}--(2, 2)node[above right]{N};
+		\end{tikzpicture}
+		\caption{三角形の底辺と平行な線分}
+		\label{tikz_tyutenrenketu_teiri}
+	\end{figure}
+
+	\subsection{三平方の定理}
+	直角三角形に成立する辺の長さに関する定理である．
+	図\ref{tikz_sannheihou_teiri}の直角三角形に対して次の式が成立する．
+	\[\mathrm{AC}^2=\mathrm{AB}^2+\mathrm{BC}^2\]
+
+	\begin{figure}[htbp]
+		\centering
+		\begin{tikzpicture}[scale=1.2]
+			\draw[thick] (0, 0)node[below left]{B}--(4, 0)node[below right]{C}--(4, 3)node[above]{A}--cycle;
+			\draw[thick] (3.6, 0)--(3.6, 0.4)--(4, 0.4);
+		\end{tikzpicture}
+		\caption{三平方の定理}
+		\label{tikz_sannheihou_teiri}
+	\end{figure}
 
 
 
