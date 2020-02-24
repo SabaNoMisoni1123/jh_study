@@ -49,41 +49,65 @@
 
 
 
-	\question{例題}
+	\question{三角形の合同に関係する例題}
 	\begin{qparts}
-		\qpart 図\ref{tizk_01_ex1}について以下の問いに答えよ．
+		\qpart 図\ref{tizk_01_ex1}で点Dは辺ABの中点で，
+		$\mathrm{DF}//\mathrm{BC}, \mathrm{DF}=\mathrm{BE}$
+		である．
+		このときに次の問を答えよ．
+
+		\begin{qlist}
+			\qitem 点Eが辺BCの中点であることを示せ．
+			\qitem $\triangle\mathrm{ADF}\equiv\triangle\mathrm{DBE}$を示せ．
+		\end{qlist}
+
 		\begin{figure}[htbp]
 			\centering
 			\begin{tikzpicture}[scale=1]
-				\draw[thin, gray, dashed] (-5, -5) grid(5, 5);
+				\coordinate(b) at (0, 0);
+				\coordinate(a) at (1, 4);
+				\coordinate(c) at (6, 0);
+				
+				\coordinate(d) at ($(a)!0.5!(b)$);
+				\coordinate(e) at ($(c)!0.5!(b)$);
+				\coordinate(f) at ($(a)!0.5!(c)$);
 
+				\draw[thick] (a)node[above]{A}--(b)node[left]{B}--(c)node[right]{C}--cycle;
+				\draw[thick] (f)node[right]{F}--(d)node[left]{D}--(e)node[below]{E};
 
 			\end{tikzpicture}
-			\caption{問題}
+			\caption{：$\mathrm{AD}=\mathrm{DB}, \mathrm{DF}//\mathrm{BC}, \mathrm{DF}=\mathrm{BE}$}
 			\label{tizk_01_ex1}
 		\end{figure}
+
+		\qpart 図\ref{tizk_01_ex2}で $\mathrm{DF}//\mathrm{BC}, \mathrm{DE}//\mathrm{AC}$である．
+		このときに次の問に答えよ．
+
 		\begin{qlist}
-			\qitem test
+			\qitem $\triangle\mathrm{FEC}\equiv\triangle\mathrm{EFD}$を示せ．
+			\qitem $\triangle\mathrm{DEF}$の面積が1であるとき，
+			$\triangle\mathrm{ABC}$の面積がどうなるのか答えよ．
 		\end{qlist}
+
+		\begin{figure}[htbp]
+			\centering
+			\begin{tikzpicture}[scale=1]
+				\coordinate(b) at (0, 0);
+				\coordinate(a) at (4, 4);
+				\coordinate(c) at (6, 0);
+				
+				\coordinate(d) at ($(a)!0.5!(b)$);
+				\coordinate(e) at ($(c)!0.5!(b)$);
+				\coordinate(f) at ($(a)!0.5!(c)$);
+
+				\draw[thick] (a)node[above]{A}--(b)node[left]{B}--(c)node[right]{C}--cycle;
+				\draw[thick] (f)node[right]{F}--(d)node[left]{D}--(e)node[below]{E}--(f)--cycle;
+
+			\end{tikzpicture}
+			\caption{：$\mathrm{DF}//\mathrm{BC}, \mathrm{DE}//\mathrm{AC}$}
+			\label{tizk_01_ex2}
+		\end{figure}
+
 	\end{qparts}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 \end{document}
