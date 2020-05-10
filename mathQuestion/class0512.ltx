@@ -1,0 +1,173 @@
+\documentclass[dvipdfmx]{beamer}
+\usepackage{graphics}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{ascmac}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{url}
+\usepackage{txfonts}
+\usepackage{color}
+\usepackage{docmute}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{intersections}
+
+\usetheme{Madrid}
+\usefonttheme{professionalfonts}
+
+\title{連立方程式を利用する文章題}
+\author{近藤 綜太}
+
+\begin{document}
+	\maketitle
+	\begin{frame}{問題}
+		\begin{enumerate}
+			\item 
+				A，Bの2つの品物を仕入れた．
+				AとBの仕入れ値の比は45:44
+				であった．
+				今，Aに20\%，Bに25\%の利益を
+				見込んで定価をつけると
+				Aの方が200円安くなった．
+				AとBの仕入れ値は
+				それぞれ何円だったか
+				求めなさい．
+			\item 
+				毎日一定の水量が
+				放水され，
+				一定の水量が
+				注入されている貯水池に，
+				現在，水が180万L
+				残っている．
+				現在の放水量では
+				60日間で貯水池は
+				空になってしまい，
+				放水量を現在の25\%
+				増しにしたとすると，
+				36日間で
+				貯水池は空に
+				なってしまうという．
+				現在の1日あたりの
+				放水量と，
+				1日あたりの
+				流入量をそれぞれ
+				求めなさい．
+		\end{enumerate}
+		
+	\end{frame}
+
+	\begin{frame}{解答1}
+		1問目は
+		AとBの仕入れ値を求める問題である．
+		なので，AとBの仕入れ値をそれぞれ $x, y$として
+		連立方程式を利用することを考える．
+
+		\pause
+
+		問題文を確認するとそこには仕入れ値に関して2つの
+		事柄が書いてあることがわかる．
+		\begin{itemize}
+			\item 仕入れ値の比が45:44
+			\item 定価をつけると200円の差
+		\end{itemize}
+		この2つの事柄を式として表現できれば，
+		あとは連立方程式を解くことで答えを得ることができる．
+	\end{frame}
+
+	\begin{frame}{解答2}
+		仕入れ値についての式を立てる．AとBの仕入れ値の比は45:44より
+		次の式である．
+		\[x:y = 45:44\]
+		比の式のままでは計算しにくいので次式に変形する．
+		\[44x=45y\, \Leftrightarrow \, 44x-45y=0\]
+
+		\pause
+
+		次は定価についてである．20\%の利益を見込むとは
+		仕入れ値に1.2をかけること，25\%に対しても同じように1.25を
+		かけることである．よってAの定価は $1.2x$，Bは $1.25y$である．
+		Aの定価がBの定価より200円安いので次の式になる．
+		\[1.2x-1.25y=-200\]
+	\end{frame}
+
+	\begin{frame}{解答3}
+		ここまでで次の連立方程式を得る．
+		\[ \begin{cases}{}
+			44x-45y=0&(1)\\
+			1.2x-1.25y=-200&(2)
+		\end{cases}\]
+
+		\pause
+
+		$(1)-36\times(2)$より
+		\begin{gather*}
+			0.8x=7200\\
+			x=9000
+		\end{gather*}
+		(1)より
+		\[y= \frac{44}{45}x=8800\]
+
+		\pause
+
+		以上より答え
+		\begin{center}
+			Aの仕入れ値9000円，Bの仕入れ値8800円．
+		\end{center}
+
+	\end{frame}
+
+	\begin{frame}{解答4}
+		2問目は
+		1日の放水量と流入量の2つを求める問題である．
+		放水量を $x\, \text{万}\mathrm{L}/\text{日}$，
+		流入量を $y\, \text{万}\mathrm{L}/\text{日}$とする．
+
+		\pause
+
+		この状態での
+		1日の水量の変化は $-x+y\, \text{万}\mathrm{L}/\text{日}$である．
+		60日つづけば180万Lがなくなる．
+		なので以下の関係を得る．
+		\[60(-x+y)=-180\]
+		変形することで連立方程式の1つの式を得る．
+		\[-x+y=-3\]
+
+		\pause
+
+		放水量を25\%増しにするとは $x\to1.25x$と考えることである．
+		この状態での1日の水量の変化は
+		$-1.25x+y\, \text{万}\mathrm{L}/\text{日}$である．
+		36日で180万Lがなくなるので次の関係を得る．
+		\[36(-1.25x+y)=-180\]
+		変形することで連立方程式のもう1つの式を得る．
+		\[-1.25x+y=-5\]
+	\end{frame}
+
+
+	\begin{frame}{解答5}
+		\[ \begin{cases}{}
+			-x+y=-3&(1)\\
+			-1.25x+y=-5&(2)
+		\end{cases}\]
+
+		\pause
+
+		$(1)-(2)$より，
+		\begin{gather*}
+			0.25x = 2\\
+			\therefore x=8
+		\end{gather*}
+		(1)より
+		\[y=-3+x=5\]
+
+		\pause
+		
+		以上より答え，
+		\begin{center}
+			流出量8万L，流入量5万L．
+		\end{center}
+		
+	\end{frame}
+\end{document}
