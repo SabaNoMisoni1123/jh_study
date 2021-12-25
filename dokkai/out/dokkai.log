@@ -1,0 +1,133 @@
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.10.2)  25 DEC 2021 10:46
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./dokkai.ltx
+(./dokkai.ltx
+pLaTeX2e <2020-10-01> (based on LaTeX2e <2020-02-02> patch level 5)
+L3 programming layer <2020-09-24>
+(/usr/local/texlive/2020/texmf-dist/tex/platex/base/tarticle.cls
+Document Class: tarticle 2020/09/30 v1.8f Standard pLaTeX class
+\c@@paper=\count167
+(/usr/local/texlive/2020/texmf-dist/tex/platex/base/tsize10.clo
+File: tsize10.clo 2020/09/30 v1.8f Standard pLaTeX file (size option)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/platex/base/plext.sty
+Package: plext 2019/09/29 v1.2l pLaTeX package file (community edition)
+\@floatbox=\box61
+\floatwidth=\dimen150
+\floatheight=\dimen151
+\floatruletick=\dimen152
+\captionfloatsep=\dimen153
+\captionwidth=\dimen154
+\@captionbox=\box62
+LaTeX Info: Redefining \parbox on input line 333.
+\save@ybaselineshift=\dimen155
+\save@tbaselineshift=\dimen156
+\@picwd=\dimen157
+\rensujiskip=\skip47
+)
+\c@part=\count168
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+\c@figure=\count174
+\c@table=\count175
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 619.
+\toclineskip=\dimen158
+\@lnumwidth=\dimen159
+\bibindent=\dimen160
+\heisei=\count176
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/docmute/docmute.sty
+Package: docmute 2012/03/22 v1.4 Input stand-alone documents
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+File: l3backend-dvips.def 2020-09-24 L3 backend support: dvips
+\l__pdf_internal_box=\box63
+\g__pdf_backend_object_int=\count177
+\l__pdf_backend_content_box=\box64
+\l__pdf_backend_model_box=\box65
+\g__pdf_backend_annotation_int=\count178
+\g__pdf_backend_link_int=\count179
+\g__pdf_backend_link_sf_int=\count180
+)
+(./out/dokkai.aux)
+\openout1 = `dokkai.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+ 《縦組モード》
+\docmute@nestinglevel=\count181
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 11.
+ (./dokkai1.ltx
+LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <14.4> not available
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 5.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 5.
+LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <14.4> not available
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 5.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 5.
+LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <12> not available
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <12> not available
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 27.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 27.
+ [1
+
+]
+LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <10> not available
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 58.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 58.
+LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <10> not available
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 58.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 58.
+ [2]) (./dokkai2.ltx
+[3] [4]) (./dokaki_conclusion.ltx) [5] (./out/dokkai.aux) ) 
+Here is how much of TeX's memory you used:
+ 612 strings out of 481351
+ 9878 string characters out of 5920004
+ 258016 words of memory out of 5000000
+ 16491 multiletter control sequences out of 15000+600000
+ 545864 words of font info for 71 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 28i,8n,29p,184b,242s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on ./out/dokkai.dvi (5 pages, 15976 bytes).
